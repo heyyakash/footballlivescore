@@ -1,6 +1,8 @@
-body{
+.home{
     margin: 0px 0px;
     background-color: rgb(37, 24, 63);
+    height:100vh;
+    width:100%;
 }
 
 .bar ul
