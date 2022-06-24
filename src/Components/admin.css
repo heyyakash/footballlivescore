@@ -1,0 +1,9 @@
+.adminpage{
+    width:100%;
+}
+.adminpanel {
+    padding:10px;
+    width:500px;
+    display:flex;
+    margin:2rem auto;
+}
