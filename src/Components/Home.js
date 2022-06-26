@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomeStyle.css';
+import './Styles/HomeStyle.css';
 import logo from '../logo.svg';
 
 const Home = () => {
