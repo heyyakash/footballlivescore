@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { collection, addDoc, getDocs, } from "firebase/firestore";
+import { collection, getDocs, } from "firebase/firestore";
 import { db } from '../Firebase';
 import './Styles/admin.css';
 import logo from '../logo.svg';
 import { doc, setDoc } from "firebase/firestore"; 
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
+// import Stack from '@mui/material/Stack';
+// import Button from '@mui/material/Button';
+// import Snackbar from '@mui/material/Snackbar';
+// import MuiAlert from '@mui/material/Alert';
 
 const Admin = () => {
     const [teamList, setTeamList] = useState([]);
