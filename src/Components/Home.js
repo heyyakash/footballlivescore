@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import './Styles/HomeStyle.css';
 import logo from '../logo.svg';
+// import { collection, addDoc, getDocs, } from "firebase/firestore";
+import { db } from '../Firebase';
+import { doc, onSnapshot } from "firebase/firestore";
 
 const Home = () => {
+    const [doc2, setdoc2] = useState({})
+    useEffect(() => {
+        onSnapshot(doc(db, "teams", "scores"), (doc) => {
+            setdoc2(doc.data())
+        });
+        }, [])
+    console.log(doc2);
+    
     return (
         <div className='home'>
             <div className="bar">
@@ -15,18 +26,18 @@ const Home = () => {
                 <table>
                     <tr>
                         <th id="Team1">
-                            Team 01
+                            {doc2.Team1}
                         </th>
                         <th id="Team 2">
-                            Team 02
+                            {doc2.Team2}
                         </th>
                     </tr>
                     <tr>
                         <td id="score1">
-                            00
+                            {doc2.Score1}
                         </td>
                         <td id="score2">
-                            00
+                            {doc2.Score2}
                         </td>
                     </tr>
                 </table>

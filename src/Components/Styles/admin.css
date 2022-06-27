@@ -91,6 +91,9 @@ button{
 color: rgb(21, 10, 41);
     cursor: pointer;
 }
+button:disabled{
+    cursor:not-allowed;
+}
 button:hover{
     background-color:  rgb(35, 145, 55);
     color: aliceblue;
